@@ -3,13 +3,9 @@
     "layer": "bottom", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 26, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        // "hyprland/mode",
-        // "hyprland/scratchpad",
         "hyprland/window"
     ],
     "modules-center": [
@@ -20,23 +16,11 @@
         "network",
         "custom/power"
     ],
-    // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "hyprland/window": {
+      "format": "{}",
+      "icon": true,
+      "icon-size": 18
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -163,10 +147,10 @@
       "format": "{icon}",
       "format-muted": " ",
       "format-icons": {
-          "default": ["", "", " "]
+          "default": ["", "", ""]
       },
       "tooltip-format": "{volume}% volume",
-      "on-click": "pavucontrol"
+      "on-click": "pavucontrol",
     },
     // "pulseaudio": {
     //     // "scroll-step": 1, // %, can be a float
