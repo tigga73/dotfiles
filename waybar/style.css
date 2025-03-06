@@ -35,7 +35,7 @@ window#waybar {
 
 #workspaces button.active {
   font-weight: bold;
-  border-top: 1px solid #64727d;
+  border-top: 2px solid #64727d;
 }
 
 #mode {
@@ -110,4 +110,9 @@ window#waybar {
 }
 
 #tray {
+}
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+  font-size: 17px;
 }
