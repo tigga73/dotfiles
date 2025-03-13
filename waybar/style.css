@@ -1,118 +1,69 @@
 * {
-  /* border: none; */
-  /* border-radius: 0; */
   font-family: "SpaceMono Nerd Font";
-  font-size: 13px;
-  min-height: 0;
 }
 
-window#waybar {
-  background: transparent;
-  color: white;
-}
-
-#window {
-  font-weight: bold;
-  font-family: "Ubuntu";
-}
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
-
-#workspaces button {
-  padding: 0 5px;
-  background: transparent;
-  color: white;
-  border-top: 1px solid transparent;
-}
-
-#workspaces button.focused {
-  color: #c9545d;
-  border-top: 1px solid #c9545d;
-}
-
-#workspaces button.active {
-  font-weight: bold;
-  border-top: 2px solid #64727d;
-}
-
-#mode {
-  background: #64727d;
-  border-bottom: 3px solid white;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#network,
-#pulseaudio,
-#custom-spotify,
-#tray,
-#mode {
-  padding: 0 6px;
-  margin: 0 2px;
+#waybar {
+  background: #091215;
+  color: #fff;
 }
 
 #clock {
-  font-weight: bold;
-}
-
-#battery {
-}
-
-#battery icon {
-  color: red;
-}
-
-#battery.charging {
-}
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: black;
-  }
-}
-
-#battery.warning:not(.charging) {
-  color: white;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#cpu {
-}
-
-#memory {
-}
-
-#network {
-}
-
-#network.disconnected {
-  background: #f53c3c;
-}
-
-#pulseaudio {
-}
-
-#pulseaudio.muted {
-}
-
-#custom-spotify {
-  color: rgb(102, 220, 105);
+  color: #fff;
 }
 
 #tray {
+  padding-left: 4px;
 }
 
-#custom-notification {
-  font-family: "NotoSansMono Nerd Font";
-  font-size: 17px;
+#workspaces button:hover {
+  background-color: transparent;
+}
+
+#workspaces button {
+  color: #fff;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 0px;
+}
+
+#workspaces button:hover {
+  background-color: #262626;
+}
+
+#workspaces button.active {
+  color: #ff6b6b;
+}
+
+#window {
+  padding-left: 8px;
+  color: #fff;
+}
+
+#network {
+  color: #14b8a6;
+  padding-left: 8px;
+}
+
+#pulseaudio {
+  color: #ffcc66;
+  margin-right: 4px;
+}
+
+#cpu {
+  color: #0ea5e9;
+  margin-right: 4px;
+}
+
+#temperature {
+  color: #eab308;
+  margin-right: 4px;
+}
+
+#memory {
+  color: #d946ef;
+  margin-right: 4px;
+}
+
+#custom-powermenu {
+  color: #ff6b6b;
 }
