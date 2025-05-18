@@ -12,6 +12,7 @@
   ],
   "modules-right": [
     "pulseaudio",
+    "bluetooth",
     "network",
     "custom/separator",
     "custom/powermenu"
@@ -28,11 +29,11 @@
     // 24 hour
     // "format": " {:%H:%M} ",
     // 12 hour
-    "format": " {:%I:%M %p}",
+    "format": "{:%A, %B %d, %Y}",
     "interval": 60,
     "tooltip": true,
     "tooltip-format": "󰸗 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%A, %B %d, %Y}"
+    "format-alt": " {:%I:%M %p}"
   },
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -119,6 +120,7 @@
   },
   "pulseaudio": {
     "format": " {volume}%",
+    "format-muted": "",
     "scroll-step": 1,
     "on-click": "pavucontrol"
   },
@@ -143,6 +145,12 @@
       "suspend": "systemctl suspend",
       "hibernate": "systemctl hibernate"
     }
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    "on-click": "blueman-manager"
   }
 }
 

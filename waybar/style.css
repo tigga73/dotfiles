@@ -3,7 +3,8 @@
 }
 
 #waybar {
-  background: #091215;
+  /* background: #091215; */
+  background-color: transparent;
   color: #fff;
 }
 
@@ -28,6 +29,7 @@
 
 #workspaces button:hover {
   background-color: #262626;
+  color: #091215;
 }
 
 #workspaces button.active {
@@ -46,6 +48,12 @@
 
 #pulseaudio {
   color: #ffcc66;
+  margin-right: 4px;
+}
+
+#bluetooth {
+  color: #6699ff;
+  margin-left: 4px;
   margin-right: 4px;
 }
 
