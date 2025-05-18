@@ -96,7 +96,8 @@
   },
   "network": {
     "format": "󰖩 ",
-    // "tooltip": "{ifname}",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip": "{ifname}",
     "tooltip-format": "{essid}",
     "interval": 2
   },
