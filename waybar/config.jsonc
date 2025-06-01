@@ -1,21 +1,22 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-bottom": 0,
+  "margin": "8",
   "modules-left": [
     "hyprland/workspaces",
     "custom/separator",
     "hyprland/window"
   ],
   "modules-center": [
-    "clock"
   ],
   "modules-right": [
     "pulseaudio",
-    "bluetooth",
-    "network",
     "custom/separator",
-    "custom/powermenu"
+    "bluetooth",
+    "custom/separator",
+    "clock"
+    // "custom/separator",
+    // "custom/powermenu"
   ],
   "custom/separator": {
     "exec": "echo \"|\"",
@@ -29,11 +30,12 @@
     // 24 hour
     // "format": " {:%H:%M} ",
     // 12 hour
-    "format": "{:%A, %B %d, %Y}",
+    // "format": " {:%I:%M %p}",
+    "format": "{:%A, %b %d %H:%M}",
     "interval": 60,
     "tooltip": true,
     "tooltip-format": "󰸗 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": " {:%I:%M %p}"
+    "format-alt": "{:%A, %B %d, %Y}"
   },
   "hyprland/workspaces": {
     "format": "{icon}",

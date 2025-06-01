@@ -3,19 +3,23 @@
 }
 
 #waybar {
-  /* background: #091215; */
-  background-color: transparent;
+  background: #1f2b38;
   color: #fff;
+  border-radius: 8px;
 }
 
 #clock {
   color: #fff;
+  margin-right: 14px;
 }
 
 #tray {
   padding-left: 4px;
 }
 
+#workspaces {
+  margin-left: 10px;
+}
 #workspaces button:hover {
   background-color: transparent;
 }
@@ -41,6 +45,9 @@
   color: #fff;
 }
 
+#custom-separator {
+  margin: 0 10px;
+}
 #network {
   color: #14b8a6;
   padding-left: 8px;
@@ -48,13 +55,10 @@
 
 #pulseaudio {
   color: #ffcc66;
-  margin-right: 4px;
 }
 
 #bluetooth {
   color: #6699ff;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 #cpu {
