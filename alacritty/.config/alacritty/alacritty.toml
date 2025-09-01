@@ -1,0 +1,12 @@
+[general]
+import=["~/.config/alacritty/tokyo-night.toml"]
+
+[font]
+normal={family="SpaceMono Nerd Font"}
+size=12
+
+[cursor]
+style={blinking="On"}
+
+[mouse]
+hide_when_typing=true

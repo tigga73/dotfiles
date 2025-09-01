@@ -1,0 +1,17 @@
+#!/bin/bash
+
+NOTAS_DIR=~/Notes
+
+nota=$(find "$NOTAS_DIR" -type f -name "*.md" \
+  | awk -F/ -v base="$NOTAS_DIR/" '{print $NF "\t" base $NF}' \
+  | fzf --with-nth=1 --delimiter='\t' \
+    --preview='batcat --style=plain --color=always {2} || cat {2}' \
+    --preview-window=right:65% \
+  | cut -f2)
+
+[ -z "$nota" ] && exit 0
+
+window_name=$(basename "$nota" .md | tr . _)
+
+tmux new-window -n "$window_name" -c "$(dirname "$nota")" "nvim \"$nota\""
+
