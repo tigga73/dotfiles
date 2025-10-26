@@ -7,15 +7,13 @@ return {
     snipe.setup({
       hints = {
         -- Charaters to use for hints (NOTE: make sure they don't collide with the navigation keymaps)
-        dictionary = "asdfghlwertyuiop",
+        dictionary = "asdfghlqwertyuiop",
+        prefix_key = ".",
       },
       ui = {
         position = "center",
         preselect_current = true,
         text_align = "file-first",
-      },
-      navigate = {
-        cancel_snipe = "q",
       },
       sort = "default",
     })
