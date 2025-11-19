@@ -31,7 +31,7 @@
     // "format": " {:%H:%M} ",
     // 12 hour
     // "format": " {:%I:%M %p}",
-    "format": "{:%A, %b %d %H:%M}",
+    "format": "{:%A, %b %d  %H:%M}",
     "interval": 60,
     "tooltip": true,
     "tooltip-format": "󰸗 <big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
