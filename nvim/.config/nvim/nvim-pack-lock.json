@@ -52,7 +52,10 @@
       "rev": "d2d196c",
       "src": "https://github.com/leath-dub/snipe.nvim"
     },
-    "vague.nvim": [],
+    "vague.nvim": {
+      "rev": "dba2805",
+      "src": "https://github.com/vague-theme/vague.nvim"
+    },
     "vim-prettier": {
       "rev": "7dbdbb1",
       "src": "https://github.com/prettier/vim-prettier"
