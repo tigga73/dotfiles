@@ -3,7 +3,7 @@
 }
 
 #waybar {
-  background: #1f2b38;
+  background: rgba(20, 20, 21, 0.8);
   color: #fff;
   border-radius: 8px;
 }
