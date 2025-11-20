@@ -2,6 +2,7 @@
   "layer": "top",
   "position": "top",
   "margin": "8",
+  "width": 1280,
   "max-width": "500",
   "modules-left": [
     "hyprland/workspaces",
