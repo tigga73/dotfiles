@@ -72,6 +72,9 @@ vim.pack.add({
   { src = "https://github.com/mikavilpas/yazi.nvim" },
   { src = "https://github.com/leath-dub/snipe.nvim" },
   { src = "https://github.com/nvim-mini/mini.pick" },
+
+  { src = "https://github.com/scalameta/nvim-metals" },
+
 })
 
 require "vague".setup()
@@ -140,6 +143,7 @@ require 'nvim-treesitter.configs'.setup({
     "vimdoc",
     "c",
     "elixir",
+    "scala"
   },
   ignore_install = {},
   sync_install = true,
@@ -163,4 +167,23 @@ vim.lsp.config("lua_ls", {
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
   command = "silent! Prettier",
+})
+
+-- scala setup
+local metals_config = require("metals").bare_config()
+metals_config.settings = {
+  verboseCompilation = true,
+  excludedPackages = {
+    "akka.actor.typed.javadsl",
+    "com.github.swagger.akka.javadsl"
+  }
+}
+
+local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "scala", "sbt", "java" },
+  callback = function()
+    require("metals").initialize_or_attach(metals_config)
+  end,
+  group = nvim_metals_group,
 })
